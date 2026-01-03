@@ -6,13 +6,13 @@ import VSLBlackAmz from "@/components/videos/vsl-black-amz";
 import { useLayer } from '@/context/layer-provider';
 import { useEffect, useState } from 'react';
 import { CheckCheck, Loader2 } from 'lucide-react';
-import RegistrationModal from "@/components/registration-modal";
+
 
 export default function Page() {
 
   // COMPONENT STATES
   const [visible, setVisible] = useState<boolean>(false);
-  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+
 
   // IMPORT CONTEXT DATA
   const { host, active, frontLink, params } = useLayer();
@@ -81,7 +81,7 @@ export default function Page() {
             <div className="block mx-auto my-8">
               <Button
                 onClick={() => {
-                  setShowRegistrationModal(true);
+                  window.location.href = frontLink;
                 }}
                 disabled={active}
                 className="pulse p-5 !bg-gradient-to-b !from-green-500 !to-green-600 hover:!from-green-400 hover:!to-green-500"
@@ -100,11 +100,7 @@ export default function Page() {
         </div>
       </div>
       <Comments />
-      <RegistrationModal
-        isOpen={showRegistrationModal}
-        onClose={() => setShowRegistrationModal(false)}
-        redirectUrl={params ? `${frontLink}?${params}` : frontLink}
-      />
+
     </div>
   );
 

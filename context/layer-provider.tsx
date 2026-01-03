@@ -60,7 +60,7 @@ export function LayerProvider({
   const [withdrawModal, setWithdrawModal] = useState<boolean>(false);
 
   // SET LINKS
-  const frontLink = 'https://app.monetizze.com.br/checkout/KSS450366';
+  const frontLink = 'https://pay.hotmart.com/X103097700L?off=sizrj8es';
   const promoLink = 'https://app.monetizze.com.br/checkout/DEB367058';
 
   // PLAY SOUND
