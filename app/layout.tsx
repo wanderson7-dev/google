@@ -39,7 +39,8 @@ export default async function Layout({
   const userLayer = await getUserLayer({ cks, hdrs });
 
   // BODY CLASS
-  const bodyClassName = `flex flex-col min-w-[350px] min-h-svh max-h-svh items-center select-none ${redHatDisplay.variable} antialiased`;
+  // Updated: Removed items-center and max-h-svh, added w-full for full width layout
+  const bodyClassName = `flex flex-col min-w-[350px] min-h-svh w-full select-none ${redHatDisplay.variable} antialiased`;
 
   return (
     <html lang="es">

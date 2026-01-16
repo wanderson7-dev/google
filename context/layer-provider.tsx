@@ -5,13 +5,12 @@ import { createContext, useContext, ReactNode, useState, useEffect } from "react
 // BALANCE VARIATIONS
 const balances: Record<string, Record<number, number>> = {
   "new": {
-    0: 0,
-    1: 71,
-    2: 142,
-    3: 204,
-    4: 204,
-    5: 204,
-    6: 204,
+    0: 100, // Base Start
+    1: 142.35, // After Rescue 1 (+42.35)
+    2: 187.50, // After Rescue 2 (+45.15)
+    3: 230.00, // After Rescue 3 (+42.50)
+    4: 230.00, // Success Screen (Static)
+    5: 230.00, // Video Page
   },
 };
 

@@ -19,18 +19,19 @@ export default function Page() {
       1: <Quiz />,
       2: <Quiz />,
       3: <Quiz />,
-      4: <Video />,
+      4: <Quiz />, // Success Screen
+      5: <Video />,
     },
   };
 
   const pageContent = routes[content]?.[page] || null;
 
   return (
-    <div className="flex flex-auto justify-center w-full max-w-xl gap-5 px-5 py-5">
+    <>
       {pageContent}
       {balanceModal && <BalanceModal />}
       {withdrawModal && <WithdrawModal />}
-    </div>
+    </>
   );
 
 };
